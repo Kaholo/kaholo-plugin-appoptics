@@ -1,0 +1,91 @@
+{
+  "name": "AppOptics",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "version": "1.0.0",
+  "description":"Kaholo integration with SolarWinds AppOptics API",
+  "imgUrl": "logo.png",
+  "settings":[
+    {
+      "name": "token",
+      "viewName": "API Token",
+      "type": "vault"
+    }
+  ],
+  "methods": [
+    {
+      "name": "getAlert",
+      "viewName": "Get Alert",
+      "params": [
+        {
+          "name": "token",
+          "viewName": "API Token",
+          "type": "vault"
+        },
+        {
+          "name": "alert",
+          "viewName": "Alert ID/Name",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "createAlert",
+      "viewName": "Create Alert",
+      "params": [
+        {
+          "name": "token",
+          "viewName": "API Token",
+          "type": "vault"
+        },
+        {
+          "name": "alertName",
+          "viewName": "Alert Name",
+          "type": "string"
+        },
+        {
+          "name": "desc",
+          "viewName": "Description",
+          "type": "text"
+        },
+        {
+          "name": "conditions",
+          "viewName": "Conditions(array)",
+          "type": "string"
+        },
+        {
+          "name": "services",
+          "viewName": "Services",
+          "type": "text"
+        },
+        {
+          "name": "attributes",
+          "viewName": "Attributes",
+          "type": "text"
+        },
+        {
+          "name": "active",
+          "viewName": "Active",
+          "type": "boolean"
+        },
+        {
+          "name": "rearm",
+          "viewName": "Rearm Minutes",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "listServices",
+      "viewName": "List Services",
+      "params": [
+        {
+          "name": "token",
+          "viewName": "API Token",
+          "type": "vault"
+        }
+      ]
+    }
+  ]
+}
