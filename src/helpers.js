@@ -10,7 +10,7 @@ async function sendToAppOptics(token, httpMethod, path, body){
         headers: new fetch.Headers()
     };
     opts.headers.set('Authorization', 'Basic ' + Buffer.from(token + ":").toString('base64'));
-    if (httpMethod === "POST" && body){
+    if (body){
         opts.body = JSON.stringify(body);
         opts.headers.set('Content-Type', 'application/json');
     }
