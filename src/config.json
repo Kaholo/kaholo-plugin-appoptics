@@ -3,10 +3,10 @@
   "type": "executer",
   "execProgram": "node",
   "main": "app.js",
-  "version": "1.0.1",
-  "description":"Kaholo integration with SolarWinds AppOptics API",
+  "version": "1.0.3",
+  "description": "Kaholo integration with SolarWinds AppOptics API",
   "imgUrl": "logo.png",
-  "settings":[
+  "settings": [
     {
       "name": "token",
       "viewName": "API Token",
@@ -87,5 +87,6 @@
         }
       ]
     }
-  ]
+  ],
+  "category": "MONITORING"
 }
